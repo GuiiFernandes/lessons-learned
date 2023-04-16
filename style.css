@@ -1,0 +1,307 @@
+:root {
+
+  --font: 'Roboto Mono';
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font), monospace, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  background-color: rgb(253, 251, 251);
+  padding-top: 8.7rem;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  overflow: auto;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: rgb(11, 135, 133);
+}
+
+h2 {
+  font-size: 2.8rem;
+  padding-top: 1rem;
+}
+
+h3 {
+  font-size: 2.3rem;
+  color: rgb(144, 212, 211);
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+th {
+  text-align: center;
+}
+
+#cabecalho {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  background-color: rgb(253, 251, 251);
+  z-index: 2;
+}
+
+.cabecalho-content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
+  border-bottom: 0.1rem solid rgb(29, 102, 107);
+}
+
+p , li {
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+ul , ol {
+  list-style: none;
+}
+
+.cabecalho-content ul {
+  display: flex;
+}
+
+.cabecalho-content ul li {
+  padding: 1rem 2rem;
+}
+
+.titulo {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.photo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#minha_foto {
+  max-width: 40rem;
+  width: 100%;
+  border-radius: 20%;
+  box-shadow: 0 4rem 4.2rem -1.8rem rgba(71, 71, 71, 0.63);
+}
+
+h2 a {
+  color: rgb(11, 135, 133);
+}
+
+.lado-direito {
+  flex: 1;
+  border-left: 0.1rem solid rgb(29, 102, 107);
+  padding-left: 1.5rem;
+}
+
+.lado-esquerdo {
+  flex: 1.5;
+  padding-right: 1.5rem;
+}
+
+.lado {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+footer {
+  margin: auto;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: rgb(29, 102, 107);
+  color: rgb(253, 251, 251);
+  width: 100%;
+}
+
+.contatos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contatos a img {
+  width: 12.3rem;
+  height: 3.1rem;
+  margin: 0 0.2rem;
+}
+
+
+#rodape p {
+  font-size: 1.2rem;
+}
+
+@media screen and ( max-width : 653px ) {
+
+  body {
+    padding-top: 13.3rem;
+  }
+}
+
+@media screen and ( max-width : 590px ) {
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .photo {
+    grid-column: 1 / 3;
+  }
+
+  .section-list {
+    justify-content: start;
+  }
+}
+
+@media screen and ( max-width : 538px ) {
+
+  .lado-direito {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .lado-esquerdo {
+    padding: 0 0 3rem;
+  }
+
+  .lado {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+@media screen and ( max-height : 450px ) {
+
+  body {
+    padding-top: 6.7rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p , li {
+    font-size: 1rem;
+  }
+
+  #rodape p {
+    font-size: 0.8rem;
+  }
+
+  #minha_foto {
+    width: 80%;
+  }
+
+  .contatos a img {
+    width: 8.61rem;
+    height: 2.17rem;
+    margin: 0 0.1rem;
+  }
+}
+
+@media screen and ( max-width : 443px ) {
+
+  body {
+    padding-top: 17.9rem;
+  }
+}
+
+@media screen and ( max-width : 375px ) {
+
+  body {
+    padding-top: 9.3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p , li {
+    font-size: 1rem;
+  }
+
+  #rodape p {
+    font-size: 0.8rem;
+  }
+
+  #minha_foto {
+    width: 80%;
+  }
+
+  .contatos a img {
+    width: 8.61rem;
+    height: 2.17rem;
+    margin: 0 0.1rem;
+  }
+
+}
